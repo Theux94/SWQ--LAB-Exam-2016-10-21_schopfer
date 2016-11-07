@@ -12,7 +12,7 @@ import org.junit.rules.TestName;
 public class StringStackTest {
 	@Rule
 	public TestName testname = new TestName();
-	final static Logger logger = Logger.getLogger(MyLogger.class.getName());
+	final static Logger logger = Logger.getLogger(StringStack.class.getName());
 
 	public Stack s;
 
