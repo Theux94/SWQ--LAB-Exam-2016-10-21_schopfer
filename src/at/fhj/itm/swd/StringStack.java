@@ -11,7 +11,7 @@ public class StringStack implements Stack {
 	 * stores the string values of this stack
 	 */
 	// hint: change visibility!
-	private String[] elementData;
+	protected String[] elementData;
 
 	/**
 	 * is the position counter of the top item

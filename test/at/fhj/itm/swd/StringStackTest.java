@@ -2,13 +2,17 @@ package at.fhj.itm.swd;
 
 import static org.junit.Assert.*;
 
+import java.util.logging.Logger;
+
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestName;
 
 public class StringStackTest {
 	@Rule
 	public TestName testname = new TestName();
-	final static Logger logger = Logger.getLogger("Testlogger");
+	final static Logger logger = Logger.getLogger(MyLogger.class.getName());
 
 	public Stack s;
 
