@@ -42,7 +42,8 @@ public class StringStack implements Stack {
 		// TODO: implement 
 		// if the array is empty return true,
 		// otherwise there are elements and return false.
-
+		if (elementIndex==0) return true;
+		else return false;
 	}
 
 	@Override
