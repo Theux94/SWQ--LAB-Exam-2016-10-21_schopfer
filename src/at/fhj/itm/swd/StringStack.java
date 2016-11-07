@@ -46,7 +46,7 @@ public class StringStack implements Stack {
 	public void push(String item) {
 		logger.info("Item: " + item);
 		if (elementIndex == elementData.length)
-			throw new IllegalStateException();
+			throw new ArrayIndexOutOfBoundsException("elementIndex == elementData.length!");
 
 		// add element to array and increment the counter
 		elementData[elementIndex++] = item;
