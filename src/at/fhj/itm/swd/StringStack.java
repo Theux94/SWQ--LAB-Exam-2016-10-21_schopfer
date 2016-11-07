@@ -13,7 +13,6 @@ public class StringStack implements Stack {
 	/**
 	 * stores the string values of this stack
 	 */
-	// hint: change visibility!
 	public String[] elementData;
 
 	/**
@@ -39,9 +38,6 @@ public class StringStack implements Stack {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO: implement 
-		// if the array is empty return true,
-		// otherwise there are elements and return false.
 		if (elementIndex==0) return true;
 		else return false;
 	}
@@ -61,11 +57,6 @@ public class StringStack implements Stack {
 		if (elementIndex == 0)
 			throw new ArrayIndexOutOfBoundsException("ElementIndex is 0");
 
-		// returns the element and decrement the counter
-		// hint: change below
 		return elementData[--elementIndex];
-
 	}
-
-
 }

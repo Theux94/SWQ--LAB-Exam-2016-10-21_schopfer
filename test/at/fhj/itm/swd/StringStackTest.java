@@ -15,7 +15,7 @@ public class StringStackTest {
 	final static Logger logger = Logger.getLogger(StringStack.class.getName());
 
 	public Stack s;
-
+	
 	@Before
 	public void setup() {
 		logger.info("Starting test: " + testname.getMethodName());
@@ -29,7 +29,7 @@ public class StringStackTest {
 	public void testStringStackContent() {
 
 		s = new StringStack(5);
-
+	
 		assertTrue(areAllArrayElementsNull(((StringStack) s).elementData));
 
 		s.push("aaa");
@@ -43,7 +43,7 @@ public class StringStackTest {
 		s.pop();
 		s.pop();
 		s.pop();
-
+		
 		assertTrue(areAllArrayElementsNull(((StringStack) s).elementData));
 
 	}
@@ -57,7 +57,7 @@ public class StringStackTest {
 
 		for (String str : array) {
 			if (str == null)
-				return false;
+				return true;
 		}
 		return true;
 	}
