@@ -14,7 +14,7 @@ public class StringStack implements Stack {
 	 * stores the string values of this stack
 	 */
 	// hint: change visibility!
-	protected String[] elementData;
+	public String[] elementData;
 
 	/**
 	 * is the position counter of the top item
@@ -58,8 +58,8 @@ public class StringStack implements Stack {
 
 	@Override
 	public String pop() {
-		if (elementIndex != 0)
-			throw new IllegalStateException("ElementIndex is not 0");
+		if (elementIndex == 0)
+			throw new ArrayIndexOutOfBoundsException("ElementIndex is 0");
 
 		// returns the element and decrement the counter
 		// hint: change below

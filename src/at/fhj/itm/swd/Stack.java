@@ -1,5 +1,7 @@
 package at.fhj.itm.swd;
 
+import java.util.logging.Logger;
+
 public interface Stack {
 
 	/**

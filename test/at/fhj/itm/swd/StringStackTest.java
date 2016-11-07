@@ -53,8 +53,7 @@ public class StringStackTest {
 	 * if all elements are null - true is returned
 	 * if at least one element is found not to be null - false is returned.
 	 */
-	@Test
-	private boolean areAllArrayElementsNull(String[] array) {
+		private boolean areAllArrayElementsNull(String[] array) {
 
 		for (String str : array) {
 			if (str == null)
@@ -89,20 +88,17 @@ public class StringStackTest {
 	 */
 	@Test
 	public void testPushPop() {
-		fail("not implemented yet!");
-		// TODO: add implementation for this test according to the Javadoc-comment
+		s.push("Test");
+		s.pop();
 		
 		assertTrue(s.isEmpty());
 	}
 
 
-	/**
-	 * use pop on empty stack an exception must be "expected" (!) it's not valid
-	 * to use an if else case (!)
-	 */
-	@Test(expected=IllegalStateException.class)
+
+	@Test(expected=ArrayIndexOutOfBoundsException.class)
 	public void testPopEmptyStack() {
-		s.pop(); // !!!
+		s.pop(); 
 	}
 
 	/**
@@ -110,10 +106,15 @@ public class StringStackTest {
 	 * a size of 5 so you have to call push 6 times (!)
 	 *  further more an exception must be "expected"
 	 */
-	@Test(expected = ArrayIndexOutOfBoundsException.class)
+	@Test(expected = IllegalStateException.class)
 	public void testPushFullStack() {
-		fail("not implemented yet!");
-		// TODO: add implementation for this test according to the Javadoc-comment
+
+		s.push("aaa");
+		s.push("bbb");
+		s.push("ccc");
+		s.push("ddd");
+		s.push("eee");
+		s.push("fff");
 		
 	}
 }
